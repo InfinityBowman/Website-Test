@@ -16,8 +16,15 @@ const highlightMenu = () => {
     const elem = document.querySelector('.highlight');
     const homeMenu = document.querySelector('#home-page');
     const aboutMenu = document.querySelector('#about-page');
-    const servicesMenu = document.querySelector('#services-page');
+    const dataMenu = document.querySelector('#data-page');
     let scrollPos = window.scrollY;
+
+    if (window.location.href.endsWith('data.html')) {
+        dataMenu.classList.add('highlight');
+        homeMenu.classList.remove('highlight');
+        aboutMenu.classList.remove('highlight');
+        return;
+    }
 
     // Adds 'highlight' class to menu items
     if (window.innerWidth > 960 && scrollPos < 600) {
@@ -28,11 +35,11 @@ const highlightMenu = () => {
     else if (window.innerWidth > 960 && scrollPos < 1400) {
         aboutMenu.classList.add('highlight');
         homeMenu.classList.remove('highlight');
-        servicesMenu.classList.remove('highlight');
+        dataMenu.classList.remove('highlight');
         return;
     }
     else if (window.innerWidth > 960 && scrollPos < 2345) {
-        servicesMenu.classList.add('highlight');
+        dataMenu.classList.add('highlight');
         aboutMenu.classList.remove('highlight');
         return;
     }
@@ -43,6 +50,7 @@ const highlightMenu = () => {
 }
 
 window.addEventListener('scroll', highlightMenu);
+window.addEventListener('load', highlightMenu);
 window.addEventListener('click', highlightMenu);
 
 // Close mobile nav after click
@@ -56,3 +64,20 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
+
+// Button gradient animations
+const button = document.querySelector('.button');
+const mainBtn = document.querySelector('.main__btn');
+
+  function updateGradient() {
+    const currentTime = new Date().getTime();
+    const position = (currentTime % 5000) / (50); // Change the divisor to adjust speed
+
+    button.style.backgroundPosition = position + '% 0%';
+    mainBtn.style.backgroundPosition = position + '% 0%';
+
+    requestAnimationFrame(updateGradient);
+  }
+  updateGradient();
+
+  // Try for logo
