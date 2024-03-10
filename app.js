@@ -19,7 +19,7 @@ const highlightMenu = () => {
     const dataMenu = document.querySelector('#data-page');
     let scrollPos = window.scrollY;
 
-    if (window.location.href.endsWith('data.html')) {
+    if (window.location.href.includes('data.html')) {
         dataMenu.classList.add('highlight');
         homeMenu.classList.remove('highlight');
         aboutMenu.classList.remove('highlight');
