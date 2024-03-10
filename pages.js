@@ -40,3 +40,11 @@ document.getElementById('navbar__logo').addEventListener('click', function(event
         window.location.href = 'index.html';
     }
 });
+
+document.getElementById('service-card-4').addEventListener('click', function(event) {
+    // Prevent the default behavior of the link
+    event.preventDefault();
+    // IKEA website Blahaj
+    window.open('https://www.ikea.com/us/en/p/blahaj-soft-toy-shark-90373590/', '_blank');
+});
+
