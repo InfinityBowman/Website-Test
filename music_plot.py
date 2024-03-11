@@ -37,7 +37,7 @@ source = ColumnDataSource(df)
 TOOLS = "hover,pan,wheel_zoom,box_zoom,reset,save"
 
 # Create a Bokeh figure
-p = figure(title='Top 5 Music Artists Per Month', x_axis_label='Date', x_axis_type='datetime', y_axis_label='Plays', width=800, height=400, tools=TOOLS)
+p = figure(title='Top 5 Music Artists Per Month', x_axis_label='Date', x_axis_type='datetime', y_axis_label='Plays', width=800, height=600, tools=TOOLS)
 
 # Add a scatter glyph to the figure
 points = p.circle(x='Date', y='PlayCount', source=source, size=12, color='white', alpha=0.6, legend_label='Artist')
@@ -61,7 +61,7 @@ div_color = Div(text=div_text)
 
 # Spinner Bar
 spinner_styles = {'color': 'orange', 'font-size': '16px'}
-spinner = Spinner(title='', low=0, high=20, step=1,
+spinner = Spinner(title='', low=0, high=40, step=1,
                   value=points.glyph.size, width=200, styles=spinner_styles)
 spinner.js_link("value", points.glyph, "size")
 
@@ -70,7 +70,7 @@ textinput = TextInput(value=points.glyph.fill_color, width=200)
 textinput.js_link("value", points.glyph, "fill_color")
 
 # Set Layout
-layout = column(row(column(div_size, spinner), column(div_color, textinput), align='center'), p)
+layout = column(row(column(div_size, spinner), column(div_color, textinput), align='center'), p, align='center')
 
 output_file("music_plot.html")
 show(layout)
