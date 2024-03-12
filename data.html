@@ -1,115 +1,125 @@
 <!-- Shortcut ! enter -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="data.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="data.css" />
     <!-- Bokeh CSS and JS files -->
-    <link rel="stylesheet" href="https://cdn.bokeh.org/bokeh/release/bokeh-3.3.4.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.bokeh.org/bokeh/release/bokeh-3.3.4.min.css"
+    />
     <script src="https://cdn.bokeh.org/bokeh/release/bokeh-3.3.4.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Navbar Section -->
     <nav class="navbar">
-        <div class="navbar__container">
-            <a href="#home" id="navbar__logo">Portfolio</a>
-            <div class="navbar__toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar__menu">
-                <li class="navbar__item">
-                    <a href="#home" class="navbar__links" id="home-page">Home</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#music" class="navbar__links" id="music-page">Music</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#data" class="navbar__links" id="data-page">Data Science</a>
-                </li>
-                <li class="navbar__item">
-                    <a href="#about" class="navbar__links" id="about-page">About</a>
-                </li>
-                <li class="navbar__btn">
-                    <a href="#sign-up" class="button" id="signup">Sign Up</a>
-                </li>
-            </ul>
+      <div class="navbar__container">
+        <a href="#home" id="navbar__logo">Portfolio</a>
+        <div class="navbar__toggle" id="mobile-menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
+        <ul class="navbar__menu">
+          <li class="navbar__item">
+            <a href="#home" class="navbar__links" id="home-page">Home</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#music" class="navbar__links" id="music-page">Music</a>
+          </li>
+          <li class="navbar__item">
+            <a href="#data" class="navbar__links" id="data-page"
+              >Data Science</a
+            >
+          </li>
+          <li class="navbar__item">
+            <a href="#about" class="navbar__links" id="about-page">About</a>
+          </li>
+          <li class="navbar__btn">
+            <a href="#sign-up" class="button" id="signup">Sign Up</a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <!-- Bokeh Plot -->
     <body>
-        <div class="plot" id="home">
-            <div class="plot__container">
-                <h1 class="plot__heading"><h1 class="plot__heading">
-                    <span class="music">Music</span>
-                    <span class="plot">Plot</span>
-                </h1>
-                <div class="plot__item">
-                    <center>
-                        <iframe src="./music_plot.html" class="plot__iframe"></iframe>
-                    </center>                </div>
-                <p class="plot__description">Made With Data From My Last.fm</p>
-            </div>
+      <div class="plot" id="home">
+        <div class="plot__container">
+          <h1 class="plot__heading">
+            <span class="music">Music</span>
+            <span class="plot">Plot</span>
+          </h1>
+          <div class="plot__item">
+            <center>
+              <iframe src="./music_plot.html" class="plot__iframe"></iframe>
+            </center>
+          </div>
+          <p class="plot__description">Made With Data From My Last.fm</p>
         </div>
+      </div>
     </body>
-    
+
     <!-- Footer Section -->
     <div class="footer__container">
-        <div class="footer__links">
-            <div class="footer__link--wrapper">
-                <div class="footer__link--items">
-                    <h2>About Me</h2>
-                    <a href="/">About</a>
-                    <a href="/">Testimonials</a>
-                    <a href="/">Terms of Service</a>
-                </div>
-                <div class="footer__link--items">
-                    <h2>Contact Me</h2>
-                    <a href="/">Contact</a>
-                    <a href="/">Support</a>
-                </div>
-            </div>
-            <div class="footer__link--wrapper">
-                <div class="footer__link--items">
-                    <h2>Videos</h2>
-                    <a href="/">Music Videos</a>
-                    <a href="/">Random Stuff</a>
-                    <a href="/">Agency</a>
-                </div>
-                <div class="footer__link--items">
-                    <h2>Social Media</h2>
-                    <a href="/">Instagram</a>
-                    <a href="/">Facebook</a>
-                    <a href="/">Youtube</a>
-                    <a href="/">Twitter</a>
-                </div>
-            </div>
+      <div class="footer__links">
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>About Me</h2>
+            <a href="/">About</a>
+            <a href="/">Testimonials</a>
+            <a href="/">Terms of Service</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Contact Me</h2>
+            <a href="/">Contact</a>
+            <a href="/">Support</a>
+          </div>
         </div>
-        <section class="social__media">
-            <div class="social__media--wrap">
-                <div class="footer__logo">
-                    <a href="/" id="footer__logo">My Portfolio</a>
-                </div>
-                <p class="website__rights">© Jacob 2024. All rights reserved</p>
-                <div class="social__icons">
-                    <a href="/" class="social__icon--link" target="_blank"
-                    ><i class="fab fa-facebook"></i></a>
-                    <a href="/" class="social__icon--link" target="_blank"
-                    ><i class="fab fa-instagram"></i></a>
-                    <a href="/" class="social__icon--link" target="_blank"
-                    ><i class="fab fa-linkedin"></i></a>
-                    <a href="/" class="social__icon--link" target="_blank"
-                    ><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-        </section>
+        <div class="footer__link--wrapper">
+          <div class="footer__link--items">
+            <h2>Videos</h2>
+            <a href="/">Music Videos</a>
+            <a href="/">Random Stuff</a>
+            <a href="/">Agency</a>
+          </div>
+          <div class="footer__link--items">
+            <h2>Social Media</h2>
+            <a href="/">Instagram</a>
+            <a href="/">Facebook</a>
+            <a href="/">Youtube</a>
+            <a href="/">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <section class="social__media">
+        <div class="social__media--wrap">
+          <div class="footer__logo">
+            <a href="/" id="footer__logo">My Portfolio</a>
+          </div>
+          <p class="website__rights">© Jacob 2024. All rights reserved</p>
+          <div class="social__icons">
+            <a href="/" class="social__icon--link" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="/" class="social__icon--link" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="/" class="social__icon--link" target="_blank"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a href="/" class="social__icon--link" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+          </div>
+        </div>
+      </section>
     </div>
     <!-- Scripts -->
-    <script src="app.js"></script>
-    <script src="pages.js"></script>
-</body>
+    <script src="js/app.js"></script>
+    <script src="js/pages.js"></script>
+  </body>
 </html>
