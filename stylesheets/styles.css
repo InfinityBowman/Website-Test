@@ -89,10 +89,17 @@
   color: #fff;
   transition: all 0.3s ease;
   background: #833ab4;
-  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-  background-size: 200% 100%;
-  transition: background-position 0.5s ease;
+  background: linear-gradient(
+    45deg,
+    #fcb045,
+    #ff6a00,
+    #fd1d1d,
+    #ee0979,
+    #e043ff,
+    #a33aff
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
 }
 
 .navbar__btn:hover {
@@ -244,12 +251,26 @@
 .hero__description {
   font-size: 60px;
   background: #da22ff;
-  background: -webkit-linear-gradient(to right, #9114ff, #e043ff);
   background: linear-gradient(to right, #8f0eff, #e043ff);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-text-fill-color: transparent;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: heroSlideIn 5s ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes heroSlideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 100;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -319,18 +340,36 @@
 .main__btn {
   font-size: 1.8rem;
   background: #833ab4;
-  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
-  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  background: linear-gradient(
+    45deg,
+    #fcb045,
+    #ff6a00,
+    #fd1d1d,
+    #ee0979,
+    #e043ff,
+    #a33aff
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
   padding: 20px 60px;
   border: none;
   border-radius: 4px;
   margin-top: 2rem;
   cursor: pointer;
   position: relative;
-  transition: all 0.35s ease;
   outline: none;
-  background-size: 200% 100%;
-  transition: background-position 0.5s ease;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .main__btn a {
@@ -570,7 +609,7 @@
 /* Footer CSS */
 .footer__container {
   background-color: #131313;
-  padding: 5rem 0;
+  padding: 3rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
