@@ -1,0 +1,99 @@
+.dashboard {
+  background: #131313;
+  /* background: linear-gradient(to right, #161616, #000000); */
+  border: 2px solid white;
+}
+
+.dashboard__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 5rem;
+  border: 2px solid white;
+}
+
+.dashboard__content {
+  border: 2px solid white;
+  display: flex;
+  flex-direction: row;
+}
+
+.dashboard__main {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard__main--item {
+  border: 2px solid white;
+}
+
+.dashboard__mod--items {
+  display: flex;
+  border: 2px solid white;
+  padding: 1rem;
+}
+
+.envelope__one {
+  border: 3px solid rgb(101, 255, 101);
+  padding: 0.1em;
+  border-radius: 10px;
+  background-color: red;
+  display: flex;
+  height: 10rem;
+  flex-direction: column;
+}
+
+.envelope__one--header {
+  display: flex;
+  flex-direction: row;
+}
+
+.envelope__one,
+h2 {
+  margin-left: 0.5rem;
+}
+
+.icon__wrapper {
+  padding: 0rem;
+  height: 50%;
+}
+
+.power-icon-one {
+  color: rgb(113, 255, 113);
+}
+
+.icon-one-btn {
+  border: 0.1rem solid #131313;
+  padding: 0.35rem;
+  background-color: #131313;
+  color: #131313;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.controller__container {
+  border: 2px solid white;
+}
+
+.envelope__two {
+  border: 2px solid white;
+  background-color: blue;
+}
+
+.envelope__three {
+  border: 2px solid white;
+  background-color: green;
+}
+
+.adsr {
+  border: 2px solid white;
+  background-color: yellow;
+}
+
+.dashboard__control--items {
+  border: 2px solid white;
+}

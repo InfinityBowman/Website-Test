@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Website</title>
     <link rel="stylesheet" href="/stylesheets/styles.css" />
+    <link rel="stylesheet" href="/stylesheets/dashboard.css" />
   </head>
   <body>
     <!-- Navbar Section -->
@@ -31,76 +32,53 @@
             <a href="#about" class="navbar__links" id="about-page">About</a>
           </li>
           <li class="navbar__btn">
-            <a href="#sign-up" class="button" id="signup">Button</a>
+            <a href="#sign-up" class="button" id="signup">Sign Up</a>
           </li>
         </ul>
       </div>
     </nav>
-    <!-- Hero Section -->
-    <div class="hero" id="home">
-      <div class="hero__container">
-        <h1 class="hero__heading">My Cool Awesome <span>Test Site</span></h1>
-        <p class="hero__description">Unlimited Possibilities</p>
-        <button class="main__btn"><a href="#about" id="dashboard-page">Explore</a></button>
-      </div>
-    </div>
 
-    <!-- About Section -->
-    <div class="main" id="about">
-      <div class="main__container">
-        <div class="main__img--container">
-          <div class="main__img--card">ICON</div>
-        </div>
-        <div class="main__content">
-          <h1>What do I do?</h1>
-          <h2>I have absolutely no idea</h2>
-          <p>Still thinking of stuff to put here</p>
-          <button class="main__btn"><a href="#">HELP ME</a></button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Services Section -->
-    <div class="services" id="services">
-      <h1>My Services</h1>
-      <div class="services__wrapper">
-        <div class="services__card">
-          <h2>I Used ChatGPT</h2>
-          <p>AI Powered Technology</p>
-          <div class="services__btn"><button>GO AI</button></div>
-        </div>
-        <div class="services__card">
-          <h2>Some buttons work</h2>
-          <p>Try them All!</p>
-          <div class="services__btn"><button>Get Started</button></div>
-        </div>
-        <div class="services__card">
-          <h2>Pretty Colors</h2>
-          <p>Wow so cool</p>
-          <div class="services__btn"><button>Go Away</button></div>
-        </div>
-        <div class="services__card">
-          <h2>Infinite Blahaj</h2>
-          <p>All the Blahaj</p>
-          <div class="services__btn" id="service-card-4">
-            <button>Get Blahaj</button>
+    <!-- Dashboard Section -->
+    <div class="dashboard" id="main">
+      <div class="dashboard__container">
+        <h2>container</h2>
+        <div class="dashboard__content">
+          <div class="dashboard__main">
+            <div class="dashboard__main--item">
+              <h2>main item</h2>
+            </div>
+            <div class="dashboard__mod--items">
+              <div class="envelope__one">
+                <!-- <div class="envelope__one--content"> -->
+                <div class="envelope__one--header">
+                  <div class="icon__wrapper">
+                    <button class="icon-one-btn"><i class="fas fa-power-off power-icon-one"></i></button>
+                  </div>
+                  <h2>Envelope 1</h2>
+                </div>
+                <div class="controller__container">temp</div>
+                <!-- </div> -->
+              </div>
+              <div class="envelope__two">
+                <div class="icon__wrapper">
+                  <i class="fas fa-power-off power-icon-two"></i>
+                </div>
+                <h1>Envelope 2</h1>
+              </div>
+              <div class="envelope__three">
+                <div class="icon__wrapper">
+                  <i class="fas fa-power-off power-icon-three"></i>
+                </div>
+                <h1>Envelope 3</h1>
+              </div>
+              <div class="adsr">
+                <h1>ADSR</h1>
+              </div>
+            </div>
           </div>
+          <div class="dashboard__control--items">control</div>
         </div>
-      </div>
-    </div>
-
-    <!-- Features Section -->
-    <div class="main" id="sign-up">
-      <div class="main__container">
-        <div class="main__content">
-          <h1>The Data Science Tab is Cool</h1>
-          <h2>It Does Something</h2>
-          <p>Go check it out!</p>
-          <button class="main__btn"><a href="#">Button</a></button>
-        </div>
-        <div class="main__img--container">
-          <div class="main__img--card" id="card-2">ICON</div>
-        </div>
+        <div class="dashboard__footer"></div>
       </div>
     </div>
 
@@ -154,5 +132,7 @@
     <!-- Scripts -->
     <script src="js/app.js"></script>
     <script src="js/pages.js"></script>
+    <script src="js/dashboard.js"></script>
+    <script src="https://kit.fontawesome.com/8543fb1768.js" crossorigin="anonymous"></script>
   </body>
 </html>
